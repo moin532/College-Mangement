@@ -30,7 +30,7 @@ const ChartStudent = () => {
 
   const {user} = useSelector((state)=>state.student );
   
-  const graph = user.TotalMarks
+  const graph =  user ? user.TotalMarks : "" 
   
 
   const lineState = {
