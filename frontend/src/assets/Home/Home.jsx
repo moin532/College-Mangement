@@ -1,7 +1,5 @@
-import { Fragment, useEffect } from "react";
-import { CgMouse } from "react-icons/cg";
+
 import styled from "styled-components";
-import { Button } from "../../Button";
 import FeautureSection from "./FeautureSection";
 import Card from "./Card";
 
@@ -199,6 +197,13 @@ const Wrapper = styled.section`
     font-size: 11px;
     margin-top: 300px
         
+    }
+
+    .cartoon,img{
+      margin-bottom: 12vh;
+        width: 38vh;
+        margin-left: 2vh;
+        height: 30vh;
     }
 
   }
