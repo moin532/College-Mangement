@@ -6,11 +6,7 @@ const FeautureSection = () => {
     <Wrapper>
       <div className="Main-sect">
       <div className="vid">
-        {/* <video className="w-full" autoPlay controls>
-
-          <source src="./images/clg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
+       
 <iframe width="853" height="480" src="https://www.youtube.com/embed/SwBFGP-IAok?rel=0&modestbranding=1" title="Srs Degree College" frameborder="0" allow="accelerometer; autoplay;  encrypted-media; gyroscope; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     
       </div>
@@ -66,10 +62,11 @@ const Wrapper = styled.section`
 
 @media screen and (max-width: 600px) {
 
-  .vid {
-    position: absolute;
-    width:100%;
-    margin-left: 0px;
+  .vid,iframe {
+    height: 30vh;
+        position: absolute;
+        width: 100%;
+        margin-left: 0px;
   }
 
   .para{
@@ -79,6 +76,10 @@ const Wrapper = styled.section`
     width: 50vh;
     margin-top: 31vh;
     position: static;
+  }
+
+  .para,p{
+    font-size: 13px;
   }
 
   
