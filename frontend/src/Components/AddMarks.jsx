@@ -36,7 +36,7 @@ const AddMarks = () => {
 
     // Attempt to load saved subjects from localStorage
     const savedSubjects = JSON.parse(localStorage.getItem('subjects'));
-   const data = savedSubjects.subjects
+    const data = savedSubjects ? savedSubjects.subjects : ""
     return data|| defaultSubjects
   });
   
