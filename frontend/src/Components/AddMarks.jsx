@@ -154,7 +154,7 @@ const AddMarks = () => {
           </button>
         </div>
       ))}
-      <button type="button" onClick={handleAddSubject} className=' flex justify-around font-bold mb-6 text-amber-600 text-2xl hover:animate-bounce'>
+      <button type="button" id = "btn "onClick={handleAddSubject} className=' flex justify-around font-bold mb-6 text-amber-600 text-2xl hover:animate-bounce'>
         Add Another Subject
       </button>
 
@@ -246,6 +246,25 @@ input.mark {
 
 .btn:hover {
   background-color: #3f5f97;
+}
+
+@media screen and (max-width: 600px) {
+
+div#content {
+ margin: 0px;
+}
+#sec{
+  margin-top: 45px;
+}
+input{
+  padding-top: 0px;
+}
+
+#btn{
+  margin-left: 96px;
+  margin-top: 67px;
+}
+
 }
 
 `
