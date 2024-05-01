@@ -154,7 +154,7 @@ const AddMarks = () => {
           </button>
         </div>
       ))}
-      <button type="button" id = "btn "onClick={handleAddSubject} className=' flex justify-around font-bold mb-6 text-amber-600 text-2xl hover:animate-bounce'>
+      <button type="button" id="btn" onClick={handleAddSubject} className=' flex justify-around font-bold mb-6 text-amber-600 text-2xl hover:animate-bounce'>
         Add Another Subject
       </button>
 
