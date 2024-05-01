@@ -28,7 +28,7 @@ const TableMarks = () => {
       navigate('/admin/marks')
     }
     
-  }, [isAuthenticated]);
+  }, [isAuthenticated , user]);
 
  
 
