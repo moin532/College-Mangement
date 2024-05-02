@@ -234,26 +234,33 @@ exports.AddaMarks = async (req, res) => {
       
     });
 
-  
-// await subjects.push(subjects)
-    const totalMarks = subjects.reduce((accumulator, currentGrade) => {
-      return accumulator + currentGrade.marks;
-    }, 0);
+
+    
+let totalMarks = 0;
+
+ subjects.forEach(subject => {
+ return  totalMarks += parseInt(subject.marks, 10);
+});
+
+
 
     const finalUpdateMarks = totalMarks + data.TotalMarks
- 
+
+  
     data.TotalMarks = finalUpdateMarks;
     await data.save();
   
-    // const url = `${req.protocol}://${req.get("host")}/profile`;
+    const url = `${req.protocol}://${req.get("host")}/profile`;
 
-    // const message = `Hello ${data.name}  \n\n Your Internal Marks is Added \n\n pls visit On our Website to See a internal marks ${url }`;
+    const message = `Hello ${data.name}  \n\n Your Internal Marks is Added \n\n pls visit On our Website to See a internal marks ${url }`;
 
-    // await sendEmail({
-    //   email: data.email,
-    //   subject: "Internal marks",
-    //   message,
-    // });
+    await sendEmail({
+      email: data.email,
+      subject: "Internal marks",
+      message,
+    });
+
+  
 
     res.status(200).json({
       sucess:true,
